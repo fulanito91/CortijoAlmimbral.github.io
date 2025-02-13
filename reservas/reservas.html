@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escapada Rural - Reservas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="jscripts.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Escapada Rural</h1>
+
+  <!-- Carrusel de imágenes -->
+  <div id="background-image-container"></div>
+  
+  <!-- Botón flotante para abrir el formulario -->
+<button id="toggle-form-button" onclick="toggleReservationForm()">Reservar</button>
+
+<!-- Formulario de reserva -->
+<section id="reservation-form" class="hidden">
+  <!-- Botón de cierre del formulario -->
+  <button id="close-form-button" onclick="toggleReservationForm()">✖</button>
+  
+  <h2>Cortijo Almimbral</h2>
+  <img src="../IMG/imagen02.jpg" alt="Vista del Cortijo Almimbral" style="width: 100%; height: auto;">
+
+  <form>
+    <label for="check-in-date">Fecha de entrada:</label>
+    <input type="date" id="check-in-date" name="checkin">
+
+    <label for="check-out-date">Fecha de salida:</label>
+    <input type="date" id="check-out-date" name="checkout">
+
+    <label for="num-people">Número de personas:</label>
+    <input type="number" id="num-people" name="people" min="1" max="16">
+
+    <button type="button" onclick="checkAvailability()">Disponibilidad y precio</button>
+    <!-- <button type="button" onclick="sendEmail()">Enviar mensaje</button>
+    <button type="button" onclick="viewPhoneNumber()">Ver teléfono</button> -->
+  </form>
+</section>
+
+  <!-- Características y servicios -->
+  <section id="features-services">
+    <div class="category">
+      <h2>Exterior</h2>
+      <ul>
+        <li>Barbacoa</li>
+        <li>Jardín</li>
+        <li>Piscina</li>
+        <li>Terraza</li>
+        <li>Zona de aparcamiento</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Situación</h2>
+      <ul>
+        <li>Acceso asfaltado</li>
+        <li>Montaña</li>
+        <li>Cerca de un río</li>
+        <li>Cerca de la playa</li>
+        <li>Parada de autobús en la puerta</li>
+        <li>Restaurante enfrente</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Interior</h2>
+      <ul>
+        <li>Calefacción</li>
+        <li>Chimenea</li>
+        <li>Cocina</li>
+        <li>Comedor</li>
+        <li>Sala de estar</li>
+        <li>Televisión</li>
+        <li>Lavadora</li>
+        <li>Lavavajillas</li>
+        <li>Microondas</li>
+        <li>Acceso a internet</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

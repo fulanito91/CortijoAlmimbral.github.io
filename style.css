@@ -1,0 +1,405 @@
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Work+Sans:700);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background:#f4f6f5; /* color fondo */
+  color: #131313;
+  font: 2.6rem/1.55 "Adobe Garamond Pro", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+}
+
+section {
+  padding: 12.5%;
+  width: 100%;
+  min-width: 250px;
+}
+section:nth-of-type(even) {
+  background: #fff; 
+  color: #111;
+}
+
+p {
+  margin-bottom: 2.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  font: bold 2.8rem "Work Sans", "Arial Black", Gadget, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 2em;
+}
+
+nav {
+ /* mix-blend-mode: difference;*/
+  z-index: 100;
+}
+
+nav ul {
+  position: fixed;
+  top: 60px;
+  right: 5px;
+  height: 100vh;
+  visibility: hidden;
+  pointer-events: none;
+  list-style: none;
+  width: 35px;
+}
+nav ul li {
+  font: bold 1.5rem "Work Sans", "Arial Black", Gadget, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.75em 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+} 
+
+
+nav.active ul {
+  visibility: visible;
+  pointer-events: initial;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-icon {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  width: 35px;
+}
+.nav-icon span {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  background: #0b0b0b;
+  display: block;
+  height: 3px;
+  right: 5px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}  
+
+
+
+.nav-icon span:before, .nav-icon span:after {
+  width: 100%;
+  height: 3px;
+  background: #080808;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+.nav-icon span:before {
+  top: -8px;
+}
+.nav-icon span:after {
+  bottom: -8px;
+}
+.active .nav-icon span {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/*titulo interactivo*/
+.title-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh; /* Tamaño completo al inicio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, font-size 0.5s ease, background-color 0.5s ease;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo inicialmente sombreado */
+}
+
+.big-title {
+  font-size: 9rem;
+  color: white;
+  transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+.title-small {
+  font-size: 2.5rem; /* Tamaño reducido */
+  transform: translate(0, 0%); /* Movimiento ajustado para quedar en la parte superior */
+  position: absolute;
+  top: 0; /* Alinea el título al inicio de la página */
+  height: auto;
+  background-color: transparent; /* Elimina el fondo sombreado */
+  width: 100%;
+  justify-content: flex-start; /* Alinea el título a la izquierda */
+  padding-left: 20px; /* Espaciado para no pegarse al borde */
+}
+
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.slide {
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  border-radius: 10px;
+}
+
+.slide-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/* SECCION BURBUJAS */
+
+
+
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-button {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.info-content {
+  display: none;
+  margin-top: 10px;
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive design considerations */
+@media (max-width: 600px) {
+  .info-button {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+#contact {
+  background-color: #f9f9f9; 
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 10px 0; 
+  font-size: 16px;
+  color: #333; 
+}
+
+.contact-info a {
+  color: #0066cc;
+  text-decoration: none; 
+}
+
+.contact-info a:hover {
+  text-decoration: underline; 
+}
+
+.youtube-container iframe {
+  width: 100%;
+  padding: 20px;
+  height: 450px; /* Ajusta según tus necesidades */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.image-gallery img {
+  width: 30%;
+  margin: 5px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.image-gallery img:active {
+  transform: scale(1.5); /* Efecto al hacer clic */
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.reservation-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+.reservation-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-button {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.info-content {
+  display: none;
+  margin-top: 10px;
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive design considerations */
+@media (max-width: 600px) {
+  .info-button {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  display: none; /* Oculto por defecto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.chat-box-header {
+  background-color: #222;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-box-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-box-body {
+  padding: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+

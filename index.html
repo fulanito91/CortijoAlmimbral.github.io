@@ -1,0 +1,141 @@
+<!doctype html>
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">****
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cortijo Almimbral</title>
+  <link rel="stylesheet" media="all" href="style.css" />
+</head>
+<body>
+<nav id="nav">
+  <button class="nav-icon" id="nav-icon"><span></span></button>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#blog">Galeria</a></li>
+    <li><a href="#contact">Reservas</a></li>
+  </ul>
+</nav>
+
+<div class="chat-icon" onclick="toggleChat()">
+  <i class="fas fa-comments"></i>
+</div>
+<div class="chat-box" id="chatBox">
+  <div class="chat-box-header">
+    Asistente Virtual
+    <button onclick="toggleChat()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="chat-box-body">
+    <div class="chat-question" onclick="showAnswer(this)">¿Cómo puedo contactar con vosotros?</div>
+    <p class="chat-answer" style="display:none;">Es sencillo, puedes dirigirte a nosotros en el siguiente teléfono 625 108 015, estaremos encantados de atenderte lo antes posible.</p>
+    
+    <div class="chat-question" onclick="showAnswer(this)">¿Hay excursiones guiadas?</div>
+    <p class="chat-answer" style="display:none;">Sí, tenéis la posibilidad de encontrar distintas excursiones guiadas en sierra y playa, así como multitud de rutas de senderismo.</p>
+    
+    <div class="chat-question" onclick="showAnswer(this)">¿Cuántas personas pueden estar en la casa?</div>
+    <p class="chat-answer" style="display:none;">Un total de 16 personas pueden estar en la casa, incluidos niños.</p>
+    
+    <div class="chat-question" onclick="showAnswer(this)">¿Qué ubicación tiene?</div>
+    <p class="chat-answer" style="display:none;">La ubicación es algo importante, por lo que lo tenéis en un posicionamiento idóneo entre la playa y Sierra Nevada, con multitud de servicios cerca como centro de salud, Mercadona, restaurantes, etc.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+
+<section id="home">
+  <div class="title-container">
+    <h1 class="big-title">Almimbral</h1>
+  </div>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide" style="background-image: url('IMG/imagen02.jpg');">
+        <span class="slide-title">Bienvenidos al Cortijo</span>
+      </div>
+      <div class="slide" style="background-image: url('IMG/piscina01.jpg');">
+        <span class="slide-title">Piscina y Chill Out</span>
+      </div>
+      <div class="slide" style="background-image: url('IMG/cuarto01.jpg');">
+        <span class="slide-title">Habitaciones con Vistas</span>
+      </div>
+      <div class="slide" style="background-image: url('IMG/salon01.jpg');">
+        <span class="slide-title">Zona de descanso interior</span>
+      </div>
+
+      <!-- Agregamos más slides según necesite -->
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+  </div>
+</section>
+
+
+
+<section id="about">
+  <h2>Nosotros</h2>
+  <div class="info-section">
+    <button class="info-button" data-target="bienvenidos">Bienvenidos a Cortijo Almimbral</button>
+    <p id="bienvenidos" class="info-content">Bienvenidos a Cortijo Almimbral, un rincón en Dúrcal que combina el encanto de los cortijos tradicionales con las comodidades modernas.Aquí, la prioridad es la comodidad, ofreciendo un alojamiento que te hace sentir como en casa, con todo lo necesario para una estancia agradable y relajante.</p>
+  </div>
+  <div class="info-section">
+    <button class="info-button" data-target="historia">Historia y Filosofía</button>
+    <p id="historia" class="info-content">En Cortijo Almimbral, hemos recuperado la esencia de los cortijos de antaño, manteniendo su autenticidad y adaptándola a las necesidades contemporáneas. Nuestro objetivo es proporcionar un refugio donde la simplicidad y el confort se encuentren en perfecta armonía.</p>
+  </div>
+  <div class="info-section">
+    <button class="info-button" data-target="Instalaciones">Instalaciones Habitaciones</button>
+    <p id="Instalaciones" class="info-content">En Cortijo Almimbral, hemos recuperado la esencia de los cortijos de antaño, manteniendo su autenticidad y adaptándola a las necesidades contemporáneas. Nuestro objetivo es proporcionar un refugio donde la simplicidad y el confort se encuentren en perfecta armonía.</p>
+  </div>
+  <div class="info-section">
+    <button class="info-button" data-target="Cocinas">Cocinas</button>
+    <p id="Cocinas" class="info-content">Contamos con dos cocinas totalmente equipadas, permitiendo a los viajeros organizarse como prefieran para preparar sus comidas. Esto facilita la convivencia y la comodidad durante la estancia.</p>
+  </div>
+  <div class="info-section">
+    <button class="info-button" data-target="Piscina">Piscina</button>
+    <p id="Piscina" class="info-content">En nuestros exteriores, encontrarás una piscina ideal para refrescarte y disfrutar del buen tiempo. El agua se mantiene limpia durante todo el año, lo que permite su uso incluso en los meses menos cálidos.</p>
+  </div>
+  <div class="info-section">
+    <button class="info-button" data-target="Jardin">Jardín y Porche</button>
+    <p id="Jardin" class="info-content">Nuestro jardín es amplio y está equipado con una variedad de mobiliario. Desde mesas y sillas para comidas al aire libre hasta tumbonas y una carpa para descansar y disfrutar de la tranquilidad del entorno.</p>
+  </div>
+</section>
+<section id="blog">
+  <h2>Galería</h2>
+  <!-- Video de YouTube -->
+  <div class="youtube-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P8R4Pqnddeo?si=vb0mtlLpGPZ0lv2l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  
+  <!-- Galería de imágenes -->
+  <div class="image-gallery">
+    <img src="IMG/baño01.jpg" alt="Descripción de la imagen 1">
+    <img src="IMG/baño02.jpg" alt="Descripción de la imagen 2">
+    <img src="IMG/baño03.jpg" alt="Descripción de la imagen 3">
+    <img src="IMG/cocina01.jpg" alt="Descripción de la imagen 4">
+    <img src="IMG/cuarto01.jpg" alt="Descripción de la imagen 5">
+    <img src="IMG/cuarto02.jpg" alt="Descripción de la imagen 6">
+    <img src="IMG/mesafuera01.jpg" alt="Descripción de la imagen 7">
+    <img src="IMG/fuerabbq.jpg" alt="Descripción de la imagen 8">
+    <img src="IMG/mesafuera02.jpg" alt="Descripción de la imagen 9">
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contacto</h2>
+  <a href="reservas/reservas.html" class="reservation-button">Reservas</a>
+  <div class="contact-info">
+    <p><strong><i class="fas fa-phone"></i> Teléfono:</strong> <a href="tel:(0034) 625 108 015">(0034) 625 108 015</a></p>
+    <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="https://www.google.com/intl/es/gmail/about/">info@tudominio.com</a></p>
+    <p><strong><i class="fab fa-instagram"></i> Instagram:</strong> <a href="https://www.instagram.com/explore/locations/1543715992591187/cortijo-el-almimbral/" target="_blank">@elalmimbral</a></p>
+    <p><strong><i class="fab fa-facebook"></i> Facebook:</strong> <a href="https://www.facebook.com/pages/Cortijo-el-Almimbral/1543715992591187" target="_blank">El Almimbral</a></p>
+    <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> C/ Alhambra, 5, 18650 Dúrcal (Granada)</p>
+  </div>
+
+</section>
+
+      <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
